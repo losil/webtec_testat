@@ -1,64 +1,26 @@
-var img = new Image();
 
-// User Variables - customize these to change the image being scrolled, its
-// direction, and the speed.
 
-img.src = '../pics/pc24_1.jpeg';
-var CanvasXSize = 800;
-var CanvasYSize = 200;
-var speed = 30; // lower is faster
-var scale = 1.05;
-var y = -4.5; // vertical offset
+var canvas = document.getElementById('myCanvas');
 
-// Main program
+// Make sure we don't execute when canvas isn't supported
+if (canvas.getContext) {
 
-var dx = 0.75;
-var imgW;
-var imgH;
-var x = 0;
-var clearX;
-var clearY;
-var ctx;
+    // use getContext to use the canvas for drawing
+    var ctx = canvas.getContext('2d');
 
-img.onload = function() {
-    imgW = img.width * scale;
-    imgH = img.height * scale;
-    
-    if (imgW > CanvasXSize) { x = CanvasXSize - imgW; } // image larger than canvas
-    if (imgW > CanvasXSize) { clearX = imgW; } // image width larger than canvas
-    else { clearX = CanvasXSize; }
-    if (imgH > CanvasYSize) { clearY = imgH; } // image height larger than canvas
-    else { clearY = CanvasYSize; }
-    
-    // get canvas contexts
-    ctx = document.getElementById('canvas').getContext('2d');
- 
-    // set refresh rate
-    return setInterval(draw, speed);
-}
+    // Draw shapes
+    ctx.beginPath();
+    ctx.arc(75, 75, 50, 0, Math.PI * 2, true);  // Outer circle
 
-function draw() {
-    ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
-    
-    // if image is <= Canvas Size
-    if (imgW <= CanvasXSize) {
-        // reset, start from beginning
-        if (x > CanvasXSize) { x = -imgW + x; }
-        // draw additional image1
-        if (x > 0) { ctx.drawImage(img, -imgW + x, y, imgW, imgH); }
-        // draw additional image2
-        if (x - imgW > 0) { ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH); }
-    }
+    ctx.moveTo(110, 75);
+    ctx.arc(75, 75, 35, 0, Math.PI, false);   // Mouth
 
-    // if image is > Canvas Size
-    else {
-        // reset, start from beginning
-        if (x > (CanvasXSize)) { x = CanvasXSize - imgW; }
-        // draw aditional image
-        if (x > (CanvasXSize-imgW)) { ctx.drawImage(img, x - imgW + 1, y, imgW, imgH); }
-    }
-    // draw image
-    ctx.drawImage(img, x, y,imgW, imgH);
-    // amount to move
-    x += dx;
+    ctx.moveTo(65, 65);
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+
+    ctx.moveTo(95, 65);
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+    ctx.stroke();
+} else {
+    alert('You need Safari or Firefox 1.5+ to see this demo.');
 }
