@@ -27,6 +27,31 @@ Index2.html styles
 }
 
 #myCanvas {
-    border: 2px;
-    border:1px solid white;
+    background-color: white;
+    color: #092973;
 }
+
+#pc24-pic {
+    max-width: 100%;
+    vertical-align: middle;
+    float: left;
+}
+
+.d-block .w-100 {
+    min-width: 100%;
+}
+.carousel-caption .d-none .d-md-block {
+    color: black;
+}
+
+/*
+
+#home, #technical-details, #kontakt {
+    background-color: #092973;
+    color: white;
+}
+
+#pc-24, #fotos, #canvas {
+    background-color: white;
+    color: #092973;
+} */
