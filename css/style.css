@@ -44,14 +44,9 @@ Index2.html styles
     color: black;
 }
 
-/*
-
-#home, #technical-details, #kontakt {
-    background-color: #092973;
-    color: white;
-}
-
-#pc-24, #fotos, #canvas {
-    background-color: white;
-    color: #092973;
-} */
+canvas {
+    margin: auto;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
