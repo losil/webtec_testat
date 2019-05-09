@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans');
 
 body {
-    background-color: #092973; 
+    background-color: #ffffff; 
     font-family: 'Work Sans',sans-serif;
-    color: white;
+    color: #092973;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -29,6 +29,7 @@ Index2.html styles
 #myCanvas {
     background-color: white;
     color: #092973;
+    border: 1px solid #092973;
 }
 
 #pc24-pic {
@@ -118,6 +119,6 @@ canvas {
   }
 
   .btn {
-    color: #092973;
-    background-color: white;
+    color: white;
+    background-color: #092973;
   }
