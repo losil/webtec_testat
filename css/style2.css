@@ -118,7 +118,17 @@ canvas {
     border-radius: 50%;
   }
 
-  .btn {
+  .btn, btn:hover {
     color: white;
     background-color: #092973;
+  }
+
+  btn:hover {
+    color: white;
+    background-color: #092973;
+  }
+
+  .btn .btn-primary.active {
+    color: #092973;
+    background-color: white;
   }

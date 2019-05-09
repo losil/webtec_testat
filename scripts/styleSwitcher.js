@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (el === l) {
-                b.textContent = "Dunkel";
+                b.textContent = "dunkel";
             }
 
             s.appendChild(b);
