@@ -1,0 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+body {
+    background-color: #092973; 
+    font-family: 'Work Sans',sans-serif;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn {
+    color: #092973;
+    background-color: white;
+  } 

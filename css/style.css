@@ -108,16 +108,25 @@ canvas {
     transform: translateX(26px);
   }
   
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
 
   .btn {
     color: #092973;
     background-color: white;
   }
+
+  #myCarousel {
+    margin-top: 40px;
+    
+  }
+  
+  .item {
+    border:1px solid #eee;
+    width:320px;
+    height:190px;
+    margin:0 auto;
+    padding:10px;
+  }
+  
+  
+  
+  

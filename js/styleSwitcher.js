@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
         l, s,
         stylez = [];
 
-    // do we have alternate stylesheets?
+    // remove unwanted stylesheet
     [].slice.call(
         document.querySelectorAll('link[rel]:not([href*="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"])')
     ).forEach(function (el) {
 
-        stylez.push(el); // save node
+        stylez.push(el); // save
 
         if (el.rel.match(/^stylesheet$/i)) {
 
