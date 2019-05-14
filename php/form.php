@@ -43,7 +43,7 @@
                 <?php echo $_GET["textArea"]; ?><br />
         </div>
  
-        <button type="button" class="btn btn-outline-secondary btn-lg btn-block" type="submit" onclick="location.href = '/index.html';"> Zurück zu Startseite </button>
+        <button class="btn btn-outline-secondary btn-lg btn-block" type="submit" onclick="location.href = '/index.html';"> Zurück zu Startseite </button>
  
     </div>
 </body>

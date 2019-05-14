@@ -126,7 +126,7 @@ canvas {
     margin:0 auto;
     padding:10px;
   }
-  
-  
-  
-  
+
+  .carousel-caption h5 p {
+    color: #092973;
+}
