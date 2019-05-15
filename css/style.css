@@ -19,8 +19,9 @@ Index2.html styles
 #titelbild {
     max-width: 200px;
 }
+
 .img-responsive {
-    max-width: 80%;
+    max-width: 100%;
     display: block;
     height: auto;
     margin: 0 auto;

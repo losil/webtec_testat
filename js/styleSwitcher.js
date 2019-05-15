@@ -1,3 +1,6 @@
+/*
+Setting cookie and adding style switcher to index.html
+*/
 document.addEventListener("DOMContentLoaded", function () {
 
     var main = document.querySelector("main:first-of-type"),
@@ -51,9 +54,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function loadStyle() {
-        if (localStorage.getItem("stylez")) {
-            l.href = localStorage.getItem("stylez");
+        if (getCookie("stylesheet")) {
+            l.href = getCookie("stylesheet")
         }
+       /* if (localStorage.getItem("stylez")) {
+            l.href = localStorage.getItem("stylez");
+        }*/
+    }
+
+    /*
+    Wrapper which filters value of the cookie
+
+    */
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1);
+            if (c.indexOf(name) == 0)
+                return c.substring(name.length, c.length);
+        }
+        return "";
     }
 
     // only continue if required elements are present
@@ -68,11 +90,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (b && b.hasAttribute("data-stylesheet")) {
 
-                // save value
-                localStorage.setItem(
-                    "stylez",
-                    b.getAttribute("data-stylesheet")
-                );
+                /*
+                Setting cokie which is valid for 5 days
+                */
+                var d = new Date();
+                d.setTime(d.getTime() + (5*24*60*60*1000));
+                var expires = "expires="+ d.toUTCString();
+                document.cookie = "stylesheet" + "=" + b.getAttribute("data-stylesheet") + ";" + expires + ";path=/";
 
                 loadStyle();
             }
