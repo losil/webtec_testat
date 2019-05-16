@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="author" content="Silvan Loser">
     <meta name="publisher" content="Silvan Loser">
-    <meta name="page-topic" content="WEBTECH TESTAT F19">
     <title>Kontaktanfrage</title>
 </head>
  
